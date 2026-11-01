@@ -1,0 +1,218 @@
+/* DeliveryMap Stylesheet */
+
+.delivery-map-card {
+  width: 100%;
+  background: #ffffff;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+  margin: 16px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.delivery-map-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 20px;
+  background-color: #fafbfc;
+  border-bottom: 1px solid #edf2f7;
+}
+
+.delivery-map-title-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.delivery-map-pulse-dot {
+  width: 10px;
+  height: 10px;
+  background-color: #ff5722;
+  border-radius: 50%;
+  box-shadow: 0 0 0 0 rgba(255, 87, 34, 0.7);
+  animation: mapPulseAnim 2s infinite;
+}
+
+@keyframes mapPulseAnim {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(255, 87, 34, 0.7);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 8px rgba(255, 87, 34, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(255, 87, 34, 0);
+  }
+}
+
+.delivery-map-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a202c;
+  margin: 0;
+}
+
+.delivery-map-header-badges {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.delivery-map-eta-pill {
+  font-size: 12px;
+  font-weight: 700;
+  color: #047857;
+  background-color: #d1fae5;
+  padding: 4px 12px;
+  border-radius: 20px;
+  border: 1px solid #a7f3d0;
+}
+
+.delivery-map-status-pill {
+  font-size: 12px;
+  font-weight: 600;
+  color: #ff5722;
+  background-color: #fff0eb;
+  padding: 4px 12px;
+  border-radius: 20px;
+  border: 1px solid #ffd8cc;
+}
+
+.live-gps-pill {
+  color: #047857;
+  background-color: #d1fae5;
+  border-color: #6ee7b7;
+  font-weight: 700;
+  animation: pulseShimmer 2s infinite;
+}
+
+.delivery-map-status-badge {
+  font-size: 11px;
+  font-weight: 700;
+  color: #ea580c;
+  background-color: #fff7ed;
+  border: 1px solid #fed7aa;
+  padding: 2px 8px;
+  border-radius: 6px;
+  text-transform: capitalize;
+}
+
+.delivery-map-footer-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.last-ping-label {
+  font-size: 11px;
+  color: #059669;
+  font-weight: 600;
+}
+
+/* Map Viewport: Must have an explicit height so Leaflet calculates dimensions */
+.delivery-map-viewport {
+  width: 100%;
+  height: 450px;
+  position: relative;
+  background-color: #f1f5f9;
+}
+
+.leaflet-map-element {
+  width: 100% !important;
+  height: 100% !important;
+  z-index: 1; /* Keep controls underneath navbars and modals */
+}
+
+/* Footer & Legend */
+.delivery-map-footer {
+  padding: 10px 20px;
+  background-color: #fafbfc;
+  border-top: 1px solid #edf2f7;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 13px;
+  color: #718096;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.delivery-map-marker-legend {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: #334155;
+  font-weight: 500;
+}
+
+.legend-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.green-dot {
+  background-color: #10b981;
+}
+
+.orange-dot {
+  background-color: #ff5722;
+}
+
+.legend-line {
+  width: 18px;
+  height: 4px;
+  border-radius: 2px;
+  display: inline-block;
+}
+
+.route-line-sample {
+  background-color: #ff5722;
+}
+
+.delivery-map-coord-display strong {
+  color: #2d3748;
+}
+
+/* Responsive design for tablets and mobile devices */
+@media (max-width: 768px) {
+  .delivery-map-viewport {
+    height: 320px;
+  }
+
+  .delivery-map-header {
+    padding: 10px 14px;
+  }
+
+  .delivery-map-title {
+    font-size: 14px;
+  }
+
+  .delivery-map-footer {
+    padding: 10px 14px;
+    font-size: 12px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .delivery-map-marker-legend {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+}

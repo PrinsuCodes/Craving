@@ -1,0 +1,98 @@
+.add {
+  width: 70%;
+  margin-left: max(5vw, 25px);
+  margin-top: 50px;
+  color: #6d6d6d;
+  font-size: 16px;
+}
+
+.add form {
+  gap: 20px;
+}
+
+.add-img-upload img {
+  width: 120px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.add-product-name,
+.add-product-description {
+  width: max(40%, 280px);
+}
+
+.add-product-name input,
+.add-product-description textarea {
+  padding: 10px;
+  border: 1px solid #c5c5c5;
+  border-radius: 4px;
+  outline-color: #ff5722;
+  font-size: 14px;
+}
+
+.add-category-price {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.add-category select,
+.add-price input,
+.add-new-category input {
+  padding: 10px;
+  border: 1px solid #c5c5c5;
+  border-radius: 4px;
+  outline-color: #ff5722;
+  font-size: 14px;
+  background-color: #ffffff;
+  color: #333333;
+}
+
+.add-category select {
+  min-width: 140px;
+  cursor: pointer;
+}
+
+.add-price input {
+  max-width: 120px;
+}
+
+.add-new-category {
+  animation: fadeInNewCategory 0.2s ease-in-out;
+}
+
+.add-new-category input {
+  min-width: 180px;
+  max-width: 240px;
+  border-color: #ff5722;
+  box-shadow: 0 0 0 1px rgba(255, 87, 34, 0.2);
+}
+
+@keyframes fadeInNewCategory {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.add-btn {
+  max-width: 120px;
+  border: none;
+  padding: 10px;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+.add-btn:hover {
+  background-color: #ff5722;
+}

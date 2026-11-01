@@ -1,0 +1,219 @@
+/* DeliverySimulator Stylesheet */
+
+.delivery-simulator-card {
+  background: #ffffff;
+  border-radius: 12px;
+  border: 1px solid #fed7aa;
+  box-shadow: 0 4px 14px rgba(234, 88, 12, 0.08);
+  padding: 16px 20px;
+  margin: 14px 0;
+  position: relative;
+}
+
+.simulator-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.simulator-badge-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.demo-badge {
+  background-color: #ea580c;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.6px;
+  padding: 3px 8px;
+  border-radius: 6px;
+  text-transform: uppercase;
+}
+
+.simulator-badge-title h4 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.simulator-disclaimer {
+  font-size: 12px;
+  color: #ea580c;
+  background-color: #fff7ed;
+  padding: 4px 10px;
+  border-radius: 14px;
+  border: 1px solid #fed7aa;
+  font-weight: 500;
+}
+
+/* Progress Bar */
+.simulator-progress-section {
+  margin-bottom: 14px;
+}
+
+.progress-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  color: #64748b;
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+.progress-percentage {
+  color: #ea580c;
+  font-weight: 700;
+}
+
+.progress-track {
+  width: 100%;
+  height: 8px;
+  background-color: #f1f5f9;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #ff5722 0%, #ea580c 100%);
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+/* Controls */
+.simulator-controls-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.simulator-playback-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.sim-btn {
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.sim-btn-play {
+  background-color: #ea580c;
+  color: #ffffff;
+  box-shadow: 0 2px 8px rgba(234, 88, 12, 0.25);
+}
+
+.sim-btn-play:hover {
+  background-color: #c2410c;
+}
+
+.sim-btn-pause {
+  background-color: #f59e0b;
+  color: #ffffff;
+}
+
+.sim-btn-pause:hover {
+  background-color: #d97706;
+}
+
+.sim-btn-reset {
+  background-color: #f1f5f9;
+  border-color: #cbd5e1;
+  color: #475569;
+}
+
+.sim-btn-reset:hover {
+  background-color: #e2e8f0;
+}
+
+.sim-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* Speed Selector */
+.simulator-speed-selector {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.speed-label {
+  font-size: 12px;
+  color: #64748b;
+  font-weight: 600;
+}
+
+.speed-btn {
+  background-color: #f8fafc;
+  border: 1px solid #cbd5e1;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #475569;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.speed-btn:hover {
+  background-color: #f1f5f9;
+}
+
+.speed-btn.active {
+  background-color: #ff5722;
+  border-color: #ff5722;
+  color: #ffffff;
+}
+
+.simulator-step-info {
+  font-size: 12px;
+  color: #64748b;
+}
+
+.simulator-step-info strong {
+  color: #1e293b;
+}
+
+.simulator-completed-banner {
+  margin-top: 12px;
+  padding: 10px 14px;
+  background-color: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  border-radius: 8px;
+  color: #166534;
+  font-size: 13px;
+  animation: fadeIn 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .simulator-controls-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .simulator-playback-buttons {
+    width: 100%;
+  }
+
+  .sim-btn {
+    flex: 1;
+    text-align: center;
+  }
+}
+

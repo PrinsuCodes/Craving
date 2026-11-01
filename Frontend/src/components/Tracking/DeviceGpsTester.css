@@ -1,0 +1,141 @@
+/* DeviceGpsTester Stylesheet */
+
+.device-gps-tester-card {
+  background: #ffffff;
+  border-radius: 12px;
+  border: 1px solid #cbd5e1;
+  padding: 16px 20px;
+  margin: 14px 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+.gps-tester-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.gps-tester-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.gps-tester-title h4 {
+  margin: 0;
+  font-size: 15px;
+  color: #1e293b;
+  font-weight: 700;
+}
+
+.gps-status-badge {
+  font-size: 11px;
+  font-weight: 600;
+  background-color: #f1f5f9;
+  color: #475569;
+  padding: 3px 10px;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+}
+
+.gps-tester-desc {
+  font-size: 13px;
+  color: #64748b;
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+
+.gps-tester-desc code {
+  background-color: #f1f5f9;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: monospace;
+}
+
+.gps-actions-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.gps-btn {
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: 1px solid transparent;
+}
+
+.primary-gps-btn {
+  background-color: #2563eb;
+  color: #ffffff;
+}
+
+.primary-gps-btn:hover {
+  background-color: #1d4ed8;
+}
+
+.apply-gps-btn {
+  background-color: #10b981;
+  color: #ffffff;
+}
+
+.apply-gps-btn:hover {
+  background-color: #059669;
+}
+
+.gps-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.gps-telemetry-box {
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 12px 16px;
+  margin-top: 10px;
+}
+
+.telemetry-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 12px;
+}
+
+.telemetry-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.tel-label {
+  font-size: 11px;
+  color: #64748b;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.tel-value {
+  font-size: 14px;
+  font-weight: 700;
+  color: #1e293b;
+  font-family: monospace;
+}
+
+.gps-error-box {
+  background-color: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #991b1b;
+  padding: 10px 14px;
+  border-radius: 6px;
+  font-size: 13px;
+  margin-top: 10px;
+}
+

@@ -1,0 +1,129 @@
+/* ToastNotification Stylesheet - Fixed Top-Right Corner */
+
+.craving-toast-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 100000; /* Higher than map popup (9999) and all other UI elements */
+  min-width: 300px;
+  max-width: 440px;
+  padding: 13px 18px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  box-shadow: 0 12px 28px -4px rgba(0, 0, 0, 0.14), 0 6px 12px -2px rgba(0, 0, 0, 0.06);
+  animation: toastSlideInRight 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  backdrop-filter: blur(10px);
+  pointer-events: auto;
+}
+
+/* Smooth Slide-In Animation from the Right */
+@keyframes toastSlideInRight {
+  from {
+    transform: translateX(110%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.craving-toast-content {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+  min-width: 0;
+}
+
+.craving-toast-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.craving-toast-svg-icon {
+  width: 22px;
+  height: 22px;
+  display: block;
+}
+
+.craving-toast-message {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.45;
+  color: inherit;
+  word-break: break-word;
+}
+
+/* Manual Dismiss Button */
+.craving-toast-close {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: inherit;
+  opacity: 0.6;
+  transition: opacity 0.15s ease, background-color 0.15s ease, transform 0.15s ease;
+  flex-shrink: 0;
+}
+
+.craving-toast-close:hover {
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.06);
+  transform: scale(1.08);
+}
+
+.craving-toast-close:active {
+  transform: scale(0.96);
+}
+
+/* Toast Variant Themes */
+.toast-success {
+  background-color: #f0fdf4;
+  border: 1.5px solid #86efac;
+  color: #15803d;
+}
+
+.toast-info {
+  background-color: #f0f9ff;
+  border: 1.5px solid #7dd3fc;
+  color: #0369a1;
+}
+
+.toast-warning {
+  background-color: #fffbeb;
+  border: 1.5px solid #fde68a;
+  color: #b45309;
+}
+
+.toast-error {
+  background-color: #fef2f2;
+  border: 1.5px solid #fca5a5;
+  color: #b91c1c;
+}
+
+/* Responsive spacing on mobile devices */
+@media (max-width: 640px) {
+  .craving-toast-container {
+    top: 16px;
+    right: 16px;
+    left: 16px;
+    min-width: unset;
+    max-width: calc(100vw - 32px);
+    padding: 12px 14px;
+  }
+
+  .craving-toast-message {
+    font-size: 13.5px;
+  }
+}

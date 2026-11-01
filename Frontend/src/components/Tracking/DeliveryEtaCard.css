@@ -1,0 +1,154 @@
+/* DeliveryEtaCard Stylesheet */
+
+.delivery-eta-card {
+  background: #ffffff;
+  border-radius: 12px;
+  border: 1px solid #fed7aa;
+  box-shadow: 0 4px 16px rgba(255, 87, 34, 0.08);
+  padding: 16px 20px;
+  margin: 14px 0;
+  transition: all 0.25s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.delivery-eta-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(180deg, #ff5722 0%, #ea580c 100%);
+}
+
+.eta-main-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.eta-badge-block {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.eta-icon-circle {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: #fff7ed;
+  color: #ea580c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ffedd5;
+}
+
+.eta-label {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #64748b;
+  margin-bottom: 2px;
+}
+
+.eta-value {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 800;
+  color: #1e293b;
+}
+
+.eta-error-text {
+  color: #dc2626;
+  font-size: 18px;
+}
+
+.eta-metric-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.metric-label {
+  font-size: 12px;
+  color: #64748b;
+  margin-bottom: 2px;
+}
+
+.metric-value {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+  color: #334155;
+  font-family: 'Outfit', sans-serif;
+}
+
+.eta-footer-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding-top: 10px;
+  font-size: 12px;
+}
+
+.eta-summary-tag {
+  background-color: #f1f5f9;
+  color: #334155;
+  padding: 3px 10px;
+  border-radius: 14px;
+  font-weight: 500;
+}
+
+.eta-error-notice {
+  color: #dc2626;
+  font-weight: 500;
+}
+
+.eta-traffic-note {
+  color: #64748b;
+  font-size: 11px;
+}
+
+.eta-traffic-note strong {
+  color: #475569;
+}
+
+/* Loading shimmer animation */
+.shimmer-text {
+  color: #94a3b8;
+  animation: pulseShimmer 1.5s infinite;
+}
+
+@keyframes pulseShimmer {
+  0% { opacity: 0.6; }
+  50% { opacity: 1; }
+  100% { opacity: 0.6; }
+}
+
+@media (max-width: 768px) {
+  .eta-main-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .arrival-clock-block {
+    display: none; /* Hide non-critical clock metric on small mobile screens */
+  }
+
+  .eta-footer-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
